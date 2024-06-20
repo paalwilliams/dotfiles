@@ -1,0 +1,2900 @@
+{
+  "source": {
+    "type": "image",
+    "image": {
+      "name": "ghcr.io/zitadel/zitadel",
+      "digest": "sha256:c8d8afaca345bcc2f431e745ef220212a52a7c5f080bf8b9a9fc56acbdc667cc",
+      "tags": [
+        "latest"
+      ],
+      "manifest": {
+        "schemaVersion": 2,
+        "mediaType": "application/vnd.docker.distribution.manifest.v2+json",
+        "config": {
+          "mediaType": "application/vnd.docker.container.image.v1+json",
+          "size": 2493,
+          "digest": "sha256:c8d8afaca345bcc2f431e745ef220212a52a7c5f080bf8b9a9fc56acbdc667cc"
+        },
+        "layers": [
+          {
+            "mediaType": "application/vnd.oci.image.layer.v1.tar",
+            "size": 3072,
+            "digest": "sha256:837158ea6b811092de14b1ae186ba1030d7e86d4b5edfac00f288ff8b56cec60"
+          },
+          {
+            "mediaType": "application/vnd.oci.image.layer.v1.tar",
+            "size": 362496,
+            "digest": "sha256:6a4baa985d0b1a9447408b9aac8a956747573032cd7d7d9ec84df360ae172892"
+          },
+          {
+            "mediaType": "application/vnd.oci.image.layer.v1.tar",
+            "size": 108070912,
+            "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+          }
+        ]
+      },
+      "config": {
+        "architecture": "arm64",
+        "created": "2024-02-16T14:10:51.161035855Z",
+        "history": [
+          {
+            "created": "2024-02-16T14:10:50.632436241Z",
+            "created_by": "ARG TARGETPLATFORM",
+            "comment": "buildkit.dockerfile.v0",
+            "empty_layer": true
+          },
+          {
+            "created": "2024-02-16T14:10:50.632436241Z",
+            "created_by": "COPY /etc/passwd /etc/passwd # buildkit",
+            "comment": "buildkit.dockerfile.v0"
+          },
+          {
+            "created": "2024-02-16T14:10:50.932211782Z",
+            "created_by": "COPY /etc/ssl/certs /etc/ssl/certs # buildkit",
+            "comment": "buildkit.dockerfile.v0"
+          },
+          {
+            "created": "2024-02-16T14:10:51.161035855Z",
+            "created_by": "COPY /app/zitadel /app/zitadel # buildkit",
+            "comment": "buildkit.dockerfile.v0"
+          },
+          {
+            "created": "2024-02-16T14:10:51.161035855Z",
+            "created_by": "HEALTHCHECK &{[\"NONE\"] \"0s\" \"0s\" \"0s\" '\\x00'}",
+            "comment": "buildkit.dockerfile.v0",
+            "empty_layer": true
+          },
+          {
+            "created": "2024-02-16T14:10:51.161035855Z",
+            "created_by": "USER zitadel",
+            "comment": "buildkit.dockerfile.v0",
+            "empty_layer": true
+          },
+          {
+            "created": "2024-02-16T14:10:51.161035855Z",
+            "created_by": "ENTRYPOINT [\"/app/zitadel\"]",
+            "comment": "buildkit.dockerfile.v0",
+            "empty_layer": true
+          }
+        ],
+        "os": "linux",
+        "rootfs": {
+          "type": "layers",
+          "diff_ids": [
+            "sha256:837158ea6b811092de14b1ae186ba1030d7e86d4b5edfac00f288ff8b56cec60",
+            "sha256:6a4baa985d0b1a9447408b9aac8a956747573032cd7d7d9ec84df360ae172892",
+            "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+          ]
+        },
+        "config": {
+          "Healthcheck": {
+            "Test": [
+              "NONE"
+            ]
+          },
+          "Entrypoint": [
+            "/app/zitadel"
+          ],
+          "Env": [
+            "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
+          ],
+          "Labels": {
+            "org.opencontainers.image.created": "2024-02-16T14:09:14.820Z",
+            "org.opencontainers.image.description": "ZITADEL - Identity infrastructure, simplified for you.",
+            "org.opencontainers.image.documentation": "https://zitadel.com/docs",
+            "org.opencontainers.image.licenses": "Apache-2.0",
+            "org.opencontainers.image.revision": "d87341ec91f4cd2ec78a98050a53918afa83c09a",
+            "org.opencontainers.image.source": "https://github.com/zitadel/zitadel",
+            "org.opencontainers.image.title": "zitadel",
+            "org.opencontainers.image.url": "https://github.com/zitadel/zitadel",
+            "org.opencontainers.image.vendor": "CAOS AG",
+            "org.opencontainers.image.version": "d87341ec91f4cd2ec78a98050a53918afa83c09a"
+          },
+          "User": "zitadel",
+          "WorkingDir": "/"
+        }
+      },
+      "raw_manifest": "eyJzY2hlbWFWZXJzaW9uIjoyLCJtZWRpYVR5cGUiOiJhcHBsaWNhdGlvbi92bmQuZG9ja2VyLmRpc3RyaWJ1dGlvbi5tYW5pZmVzdC52Mitqc29uIiwiY29uZmlnIjp7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5kb2NrZXIuY29udGFpbmVyLmltYWdlLnYxK2pzb24iLCJzaXplIjoyNDkzLCJkaWdlc3QiOiJzaGEyNTY6YzhkOGFmYWNhMzQ1YmNjMmY0MzFlNzQ1ZWYyMjAyMTJhNTJhN2M1ZjA4MGJmOGI5YTlmYzU2YWNiZGM2NjdjYyJ9LCJsYXllcnMiOlt7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vY2kuaW1hZ2UubGF5ZXIudjEudGFyIiwic2l6ZSI6MzA3MiwiZGlnZXN0Ijoic2hhMjU2OjgzNzE1OGVhNmI4MTEwOTJkZTE0YjFhZTE4NmJhMTAzMGQ3ZTg2ZDRiNWVkZmFjMDBmMjg4ZmY4YjU2Y2VjNjAifSx7Im1lZGlhVHlwZSI6ImFwcGxpY2F0aW9uL3ZuZC5vY2kuaW1hZ2UubGF5ZXIudjEudGFyIiwic2l6ZSI6MzYyNDk2LCJkaWdlc3QiOiJzaGEyNTY6NmE0YmFhOTg1ZDBiMWE5NDQ3NDA4YjlhYWM4YTk1Njc0NzU3MzAzMmNkN2Q3ZDllYzg0ZGYzNjBhZTE3Mjg5MiJ9LHsibWVkaWFUeXBlIjoiYXBwbGljYXRpb24vdm5kLm9jaS5pbWFnZS5sYXllci52MS50YXIiLCJzaXplIjoxMDgwNzA5MTIsImRpZ2VzdCI6InNoYTI1NjowMzZlYzhmNzczNWNlYjI2M2IwZjYwZWIyYzYzZmI0YmQ4M2RhMTM2Nzk1NWI4ZWJlZmJiNWY1YWJhZmQ4MDBhIn1dfQ==",
+      "raw_config": "eyJhcmNoaXRlY3R1cmUiOiJhcm02NCIsImNvbmZpZyI6eyJVc2VyIjoieml0YWRlbCIsIkVudiI6WyJQQVRIPS91c3IvbG9jYWwvc2JpbjovdXNyL2xvY2FsL2JpbjovdXNyL3NiaW46L3Vzci9iaW46L3NiaW46L2JpbiJdLCJFbnRyeXBvaW50IjpbIi9hcHAveml0YWRlbCJdLCJXb3JraW5nRGlyIjoiLyIsIkxhYmVscyI6eyJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UuY3JlYXRlZCI6IjIwMjQtMDItMTZUMTQ6MDk6MTQuODIwWiIsIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5kZXNjcmlwdGlvbiI6IlpJVEFERUwgLSBJZGVudGl0eSBpbmZyYXN0cnVjdHVyZSwgc2ltcGxpZmllZCBmb3LCoHlvdS4iLCJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UuZG9jdW1lbnRhdGlvbiI6Imh0dHBzOi8veml0YWRlbC5jb20vZG9jcyIsIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS5saWNlbnNlcyI6IkFwYWNoZS0yLjAiLCJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UucmV2aXNpb24iOiJkODczNDFlYzkxZjRjZDJlYzc4YTk4MDUwYTUzOTE4YWZhODNjMDlhIiwib3JnLm9wZW5jb250YWluZXJzLmltYWdlLnNvdXJjZSI6Imh0dHBzOi8vZ2l0aHViLmNvbS96aXRhZGVsL3ppdGFkZWwiLCJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UudGl0bGUiOiJ6aXRhZGVsIiwib3JnLm9wZW5jb250YWluZXJzLmltYWdlLnVybCI6Imh0dHBzOi8vZ2l0aHViLmNvbS96aXRhZGVsL3ppdGFkZWwiLCJvcmcub3BlbmNvbnRhaW5lcnMuaW1hZ2UudmVuZG9yIjoiQ0FPUyBBRyIsIm9yZy5vcGVuY29udGFpbmVycy5pbWFnZS52ZXJzaW9uIjoiZDg3MzQxZWM5MWY0Y2QyZWM3OGE5ODA1MGE1MzkxOGFmYTgzYzA5YSJ9LCJIZWFsdGhjaGVjayI6eyJUZXN0IjpbIk5PTkUiXX0sIk9uQnVpbGQiOm51bGx9LCJjcmVhdGVkIjoiMjAyNC0wMi0xNlQxNDoxMDo1MS4xNjEwMzU4NTVaIiwiaGlzdG9yeSI6W3siY3JlYXRlZCI6IjIwMjQtMDItMTZUMTQ6MTA6NTAuNjMyNDM2MjQxWiIsImNyZWF0ZWRfYnkiOiJBUkcgVEFSR0VUUExBVEZPUk0iLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCIsImVtcHR5X2xheWVyIjp0cnVlfSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTE2VDE0OjEwOjUwLjYzMjQzNjI0MVoiLCJjcmVhdGVkX2J5IjoiQ09QWSAvZXRjL3Bhc3N3ZCAvZXRjL3Bhc3N3ZCAjIGJ1aWxka2l0IiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAifSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTE2VDE0OjEwOjUwLjkzMjIxMTc4MloiLCJjcmVhdGVkX2J5IjoiQ09QWSAvZXRjL3NzbC9jZXJ0cyAvZXRjL3NzbC9jZXJ0cyAjIGJ1aWxka2l0IiwiY29tbWVudCI6ImJ1aWxka2l0LmRvY2tlcmZpbGUudjAifSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTE2VDE0OjEwOjUxLjE2MTAzNTg1NVoiLCJjcmVhdGVkX2J5IjoiQ09QWSAvYXBwL3ppdGFkZWwgL2FwcC96aXRhZGVsICMgYnVpbGRraXQiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCJ9LHsiY3JlYXRlZCI6IjIwMjQtMDItMTZUMTQ6MTA6NTEuMTYxMDM1ODU1WiIsImNyZWF0ZWRfYnkiOiJIRUFMVEhDSEVDSyBcdTAwMjZ7W1wiTk9ORVwiXSBcIjBzXCIgXCIwc1wiIFwiMHNcIiAnXFx4MDAnfSIsImNvbW1lbnQiOiJidWlsZGtpdC5kb2NrZXJmaWxlLnYwIiwiZW1wdHlfbGF5ZXIiOnRydWV9LHsiY3JlYXRlZCI6IjIwMjQtMDItMTZUMTQ6MTA6NTEuMTYxMDM1ODU1WiIsImNyZWF0ZWRfYnkiOiJVU0VSIHppdGFkZWwiLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCIsImVtcHR5X2xheWVyIjp0cnVlfSx7ImNyZWF0ZWQiOiIyMDI0LTAyLTE2VDE0OjEwOjUxLjE2MTAzNTg1NVoiLCJjcmVhdGVkX2J5IjoiRU5UUllQT0lOVCBbXCIvYXBwL3ppdGFkZWxcIl0iLCJjb21tZW50IjoiYnVpbGRraXQuZG9ja2VyZmlsZS52MCIsImVtcHR5X2xheWVyIjp0cnVlfV0sIm1vYnkuYnVpbGRraXQuYnVpbGRpbmZvLnYxIjoiZXlKbWNtOXVkR1Z1WkNJNkltUnZZMnRsY21acGJHVXVkakFpTENKemIzVnlZMlZ6SWpwYmV5SjBlWEJsSWpvaVpHOWphMlZ5TFdsdFlXZGxJaXdpY21WbUlqb2laRzlqYTJWeUxtbHZMMnhwWW5KaGNua3ZaR1ZpYVdGdU9teGhkR1Z6ZENJc0luQnBiaUk2SW5Ob1lUSTFOam8wTkRneU9UVTRZalEwTmpGbVpqZGtPV1poWW1NeU5HSXpZVGxoWWpGbE9XRXlZemcxWldObE1EZGlNbVJpTVRnME1HTTNZMkpqTURGa01EVXpaVGt3SW4xZGZRPT0iLCJvcyI6ImxpbnV4Iiwicm9vdGZzIjp7InR5cGUiOiJsYXllcnMiLCJkaWZmX2lkcyI6WyJzaGEyNTY6ODM3MTU4ZWE2YjgxMTA5MmRlMTRiMWFlMTg2YmExMDMwZDdlODZkNGI1ZWRmYWMwMGYyODhmZjhiNTZjZWM2MCIsInNoYTI1Njo2YTRiYWE5ODVkMGIxYTk0NDc0MDhiOWFhYzhhOTU2NzQ3NTczMDMyY2Q3ZDdkOWVjODRkZjM2MGFlMTcyODkyIiwic2hhMjU2OjAzNmVjOGY3NzM1Y2ViMjYzYjBmNjBlYjJjNjNmYjRiZDgzZGExMzY3OTU1YjhlYmVmYmI1ZjVhYmFmZDgwMGEiXX19",
+      "distro": {},
+      "platform": {
+        "os": "linux",
+        "architecture": "arm64"
+      },
+      "size": 108436480
+    },
+    "provenance": {
+      "vcs": {
+        "revision": "d87341ec91f4cd2ec78a98050a53918afa83c09a",
+        "source": "https://github.com/zitadel/zitadel"
+      }
+    }
+  },
+  "artifacts": [
+    {
+      "type": "golang",
+      "namespace": "cloud.google.com/go/compute",
+      "name": "metadata",
+      "version": "0.2.3",
+      "purl": "pkg:golang/cloud.google.com/go/compute/metadata@0.2.3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "cloud.google.com/go",
+      "name": "iam",
+      "version": "1.1.5",
+      "purl": "pkg:golang/cloud.google.com/go/iam@1.1.5",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "cloud.google.com/go",
+      "name": "storage",
+      "version": "1.36.0",
+      "purl": "pkg:golang/cloud.google.com/go/storage@1.36.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "cloud.google.com/go",
+      "name": "trace",
+      "version": "1.10.4",
+      "purl": "pkg:golang/cloud.google.com/go/trace@1.10.4",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "cloud.google.com",
+      "name": "go",
+      "version": "0.112.0",
+      "purl": "pkg:golang/cloud.google.com/go@0.112.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/ajstarks",
+      "name": "svgo",
+      "version": "0.0.0-20211024235047-1546f124cd8b",
+      "purl": "pkg:golang/github.com/ajstarks/svgo@0.0.0-20211024235047-1546f124cd8b",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/amdonov",
+      "name": "xmlsig",
+      "version": "0.1.0",
+      "purl": "pkg:golang/github.com/amdonov/xmlsig@0.1.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/azure",
+      "name": "go-ntlmssp",
+      "version": "0.0.0-20221128193559-754e69321358",
+      "purl": "pkg:golang/github.com/azure/go-ntlmssp@0.0.0-20221128193559-754e69321358",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/beevik",
+      "name": "etree",
+      "version": "1.3.0",
+      "purl": "pkg:golang/github.com/beevik/etree@1.3.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/benbjohnson",
+      "name": "clock",
+      "version": "1.3.5",
+      "purl": "pkg:golang/github.com/benbjohnson/clock@1.3.5",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/beorn7",
+      "name": "perks",
+      "version": "1.0.1",
+      "purl": "pkg:golang/github.com/beorn7/perks@1.0.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/bmatcuk/doublestar",
+      "name": "v4",
+      "version": "4.6.1",
+      "purl": "pkg:golang/github.com/bmatcuk/doublestar/v4@4.6.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/boombuler",
+      "name": "barcode",
+      "version": "1.0.1",
+      "purl": "pkg:golang/github.com/boombuler/barcode@1.0.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/burntsushi",
+      "name": "toml",
+      "version": "1.3.2",
+      "purl": "pkg:golang/github.com/burntsushi/toml@1.3.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/cenkalti/backoff",
+      "name": "v4",
+      "version": "4.2.1",
+      "purl": "pkg:golang/github.com/cenkalti/backoff/v4@4.2.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/cespare/xxhash",
+      "name": "v2",
+      "version": "2.2.0",
+      "purl": "pkg:golang/github.com/cespare/xxhash/v2@2.2.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/cockroachdb/cockroach-go",
+      "name": "v2",
+      "version": "2.3.5",
+      "purl": "pkg:golang/github.com/cockroachdb/cockroach-go/v2@2.3.5",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/common-nighthawk",
+      "name": "go-figure",
+      "version": "0.0.0-20210622060536-734e95fb86be",
+      "purl": "pkg:golang/github.com/common-nighthawk/go-figure@0.0.0-20210622060536-734e95fb86be",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/crewjam",
+      "name": "httperr",
+      "version": "0.2.0",
+      "purl": "pkg:golang/github.com/crewjam/httperr@0.2.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/crewjam",
+      "name": "saml",
+      "version": "0.4.14",
+      "purl": "pkg:golang/github.com/crewjam/saml@0.4.14",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/davecgh",
+      "name": "go-spew",
+      "version": "1.1.2-0.20180830191138-d8f796af33cc",
+      "purl": "pkg:golang/github.com/davecgh/go-spew@1.1.2-0.20180830191138-d8f796af33cc",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/descope",
+      "name": "virtualwebauthn",
+      "version": "1.0.2",
+      "purl": "pkg:golang/github.com/descope/virtualwebauthn@1.0.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/desertbit",
+      "name": "timer",
+      "version": "0.0.0-20180107155436-c41aec40b27f",
+      "purl": "pkg:golang/github.com/desertbit/timer@0.0.0-20180107155436-c41aec40b27f",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dlclark",
+      "name": "regexp2",
+      "version": "1.10.0",
+      "purl": "pkg:golang/github.com/dlclark/regexp2@1.10.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dop251",
+      "name": "goja",
+      "version": "0.0.0-20231027120936-b396bb4c349d",
+      "purl": "pkg:golang/github.com/dop251/goja@0.0.0-20231027120936-b396bb4c349d",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dop251",
+      "name": "goja_nodejs",
+      "version": "0.0.0-20231122114759-e84d9a924c5c",
+      "purl": "pkg:golang/github.com/dop251/goja_nodejs@0.0.0-20231122114759-e84d9a924c5c",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/drone",
+      "name": "envsubst",
+      "version": "1.0.3",
+      "purl": "pkg:golang/github.com/drone/envsubst@1.0.3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea/go-exif",
+      "name": "v2",
+      "version": "2.0.0-20230826092837-6579e82b732d",
+      "purl": "pkg:golang/github.com/dsoprea/go-exif/v2@2.0.0-20230826092837-6579e82b732d",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea",
+      "name": "go-exif",
+      "version": "0.0.0-20230826092837-6579e82b732d",
+      "purl": "pkg:golang/github.com/dsoprea/go-exif@0.0.0-20230826092837-6579e82b732d",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea",
+      "name": "go-iptc",
+      "version": "0.0.0-20200610044640-bc9ca208b413",
+      "purl": "pkg:golang/github.com/dsoprea/go-iptc@0.0.0-20200610044640-bc9ca208b413",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea",
+      "name": "go-jpeg-image-structure",
+      "version": "0.0.0-20221012074422-4f3f7e934102",
+      "purl": "pkg:golang/github.com/dsoprea/go-jpeg-image-structure@0.0.0-20221012074422-4f3f7e934102",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea",
+      "name": "go-logging",
+      "version": "0.0.0-20200710184922-b02d349568dd",
+      "purl": "pkg:golang/github.com/dsoprea/go-logging@0.0.0-20200710184922-b02d349568dd",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea",
+      "name": "go-photoshop-info-format",
+      "version": "0.0.0-20200610045659-121dd752914d",
+      "purl": "pkg:golang/github.com/dsoprea/go-photoshop-info-format@0.0.0-20200610045659-121dd752914d",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea",
+      "name": "go-png-image-structure",
+      "version": "0.0.0-20210512210324-29b889a6093d",
+      "purl": "pkg:golang/github.com/dsoprea/go-png-image-structure@0.0.0-20210512210324-29b889a6093d",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/dsoprea",
+      "name": "go-utility",
+      "version": "0.0.0-20221003172846-a3e1774ef349",
+      "purl": "pkg:golang/github.com/dsoprea/go-utility@0.0.0-20221003172846-a3e1774ef349",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/envoyproxy",
+      "name": "protoc-gen-validate",
+      "version": "1.0.3",
+      "purl": "pkg:golang/github.com/envoyproxy/protoc-gen-validate@1.0.3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/fatih",
+      "name": "color",
+      "version": "1.16.0",
+      "purl": "pkg:golang/github.com/fatih/color@1.16.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/felixge",
+      "name": "httpsnoop",
+      "version": "1.0.4",
+      "purl": "pkg:golang/github.com/felixge/httpsnoop@1.0.4",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/fsnotify",
+      "name": "fsnotify",
+      "version": "1.7.0",
+      "purl": "pkg:golang/github.com/fsnotify/fsnotify@1.7.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/fxamacker/cbor",
+      "name": "v2",
+      "version": "2.5.0",
+      "purl": "pkg:golang/github.com/fxamacker/cbor/v2@2.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-asn1-ber",
+      "name": "asn1-ber",
+      "version": "1.5.5",
+      "purl": "pkg:golang/github.com/go-asn1-ber/asn1-ber@1.5.5",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-chi/chi",
+      "name": "v5",
+      "version": "5.0.11",
+      "purl": "pkg:golang/github.com/go-chi/chi/v5@5.0.11",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-errors",
+      "name": "errors",
+      "version": "1.5.1",
+      "purl": "pkg:golang/github.com/go-errors/errors@1.5.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-jose/go-jose",
+      "name": "v3",
+      "version": "3.0.1",
+      "purl": "pkg:golang/github.com/go-jose/go-jose/v3@3.0.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-ldap/ldap",
+      "name": "v3",
+      "version": "3.4.6",
+      "purl": "pkg:golang/github.com/go-ldap/ldap/v3@3.4.6",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-logr",
+      "name": "logr",
+      "version": "1.4.1",
+      "purl": "pkg:golang/github.com/go-logr/logr@1.4.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-logr",
+      "name": "stdr",
+      "version": "1.2.2",
+      "purl": "pkg:golang/github.com/go-logr/stdr@1.2.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-sourcemap",
+      "name": "sourcemap",
+      "version": "2.1.3+incompatible",
+      "purl": "pkg:golang/github.com/go-sourcemap/sourcemap@2.1.3+incompatible",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-webauthn",
+      "name": "webauthn",
+      "version": "0.10.0",
+      "purl": "pkg:golang/github.com/go-webauthn/webauthn@0.10.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-webauthn",
+      "name": "x",
+      "version": "0.1.6",
+      "purl": "pkg:golang/github.com/go-webauthn/x@0.1.6",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/go-xmlfmt",
+      "name": "xmlfmt",
+      "version": "1.1.2",
+      "purl": "pkg:golang/github.com/go-xmlfmt/xmlfmt@1.1.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/gofrs",
+      "name": "uuid",
+      "version": "4.4.0+incompatible",
+      "purl": "pkg:golang/github.com/gofrs/uuid@4.4.0+incompatible",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/golang-jwt/jwt",
+      "name": "v4",
+      "version": "4.5.0",
+      "purl": "pkg:golang/github.com/golang-jwt/jwt/v4@4.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/golang-jwt/jwt",
+      "name": "v5",
+      "version": "5.2.0",
+      "purl": "pkg:golang/github.com/golang-jwt/jwt/v5@5.2.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/golang",
+      "name": "geo",
+      "version": "0.0.0-20230421003525-6adc56603217",
+      "purl": "pkg:golang/github.com/golang/geo@0.0.0-20230421003525-6adc56603217",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/golang",
+      "name": "groupcache",
+      "version": "0.0.0-20210331224755-41bb18bfe9da",
+      "purl": "pkg:golang/github.com/golang/groupcache@0.0.0-20210331224755-41bb18bfe9da",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/golang",
+      "name": "protobuf",
+      "version": "1.5.3",
+      "purl": "pkg:golang/github.com/golang/protobuf@1.5.3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/google",
+      "name": "go-tpm",
+      "version": "0.9.0",
+      "purl": "pkg:golang/github.com/google/go-tpm@0.9.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/google",
+      "name": "pprof",
+      "version": "0.0.0-20231229205709-960ae82b1e42",
+      "purl": "pkg:golang/github.com/google/pprof@0.0.0-20231229205709-960ae82b1e42",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/google",
+      "name": "s2a-go",
+      "version": "0.1.7",
+      "purl": "pkg:golang/github.com/google/s2a-go@0.1.7",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/google",
+      "name": "uuid",
+      "version": "1.6.0",
+      "purl": "pkg:golang/github.com/google/uuid@1.6.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/googleapis",
+      "name": "enterprise-certificate-proxy",
+      "version": "0.3.2",
+      "purl": "pkg:golang/github.com/googleapis/enterprise-certificate-proxy@0.3.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/googleapis/gax-go",
+      "name": "v2",
+      "version": "2.12.0",
+      "purl": "pkg:golang/github.com/googleapis/gax-go/v2@2.12.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/googlecloudplatform/opentelemetry-operations-go/exporter",
+      "name": "trace",
+      "version": "1.21.0",
+      "purl": "pkg:golang/github.com/googlecloudplatform/opentelemetry-operations-go/exporter/trace@1.21.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/googlecloudplatform/opentelemetry-operations-go/internal",
+      "name": "resourcemapping",
+      "version": "0.45.0",
+      "purl": "pkg:golang/github.com/googlecloudplatform/opentelemetry-operations-go/internal/resourcemapping@0.45.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/gorilla",
+      "name": "csrf",
+      "version": "1.7.2",
+      "purl": "pkg:golang/github.com/gorilla/csrf@1.7.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/gorilla",
+      "name": "handlers",
+      "version": "1.5.2",
+      "purl": "pkg:golang/github.com/gorilla/handlers@1.5.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/gorilla",
+      "name": "mux",
+      "version": "1.8.1",
+      "purl": "pkg:golang/github.com/gorilla/mux@1.8.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/gorilla",
+      "name": "schema",
+      "version": "1.2.1",
+      "purl": "pkg:golang/github.com/gorilla/schema@1.2.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/gorilla",
+      "name": "securecookie",
+      "version": "1.1.2",
+      "purl": "pkg:golang/github.com/gorilla/securecookie@1.1.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/grpc-ecosystem",
+      "name": "go-grpc-middleware",
+      "version": "1.4.0",
+      "purl": "pkg:golang/github.com/grpc-ecosystem/go-grpc-middleware@1.4.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/grpc-ecosystem/grpc-gateway",
+      "name": "v2",
+      "version": "2.19.0",
+      "purl": "pkg:golang/github.com/grpc-ecosystem/grpc-gateway/v2@2.19.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/grpc-ecosystem",
+      "name": "grpc-gateway",
+      "version": "1.16.0",
+      "purl": "pkg:golang/github.com/grpc-ecosystem/grpc-gateway@1.16.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/h2non",
+      "name": "filetype",
+      "version": "1.1.3",
+      "purl": "pkg:golang/github.com/h2non/filetype@1.1.3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/hashicorp",
+      "name": "hcl",
+      "version": "1.0.0",
+      "purl": "pkg:golang/github.com/hashicorp/hcl@1.0.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/improbable-eng",
+      "name": "grpc-web",
+      "version": "0.15.0",
+      "purl": "pkg:golang/github.com/improbable-eng/grpc-web@0.15.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc/chunkreader",
+      "name": "v2",
+      "version": "2.0.1",
+      "purl": "pkg:golang/github.com/jackc/chunkreader/v2@2.0.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc",
+      "name": "pgconn",
+      "version": "1.14.1",
+      "purl": "pkg:golang/github.com/jackc/pgconn@1.14.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc",
+      "name": "pgio",
+      "version": "1.0.0",
+      "purl": "pkg:golang/github.com/jackc/pgio@1.0.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc",
+      "name": "pgpassfile",
+      "version": "1.0.0",
+      "purl": "pkg:golang/github.com/jackc/pgpassfile@1.0.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc/pgproto3",
+      "name": "v2",
+      "version": "2.3.2",
+      "purl": "pkg:golang/github.com/jackc/pgproto3/v2@2.3.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc",
+      "name": "pgservicefile",
+      "version": "0.0.0-20231201235250-de7065d80cb9",
+      "purl": "pkg:golang/github.com/jackc/pgservicefile@0.0.0-20231201235250-de7065d80cb9",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc",
+      "name": "pgtype",
+      "version": "1.14.1",
+      "purl": "pkg:golang/github.com/jackc/pgtype@1.14.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jackc/pgx",
+      "name": "v4",
+      "version": "4.18.1",
+      "purl": "pkg:golang/github.com/jackc/pgx/v4@4.18.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jarcoal",
+      "name": "jpath",
+      "version": "0.0.0-20140328210829-f76b8b2dbf52",
+      "purl": "pkg:golang/github.com/jarcoal/jpath@0.0.0-20140328210829-f76b8b2dbf52",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jinzhu",
+      "name": "gorm",
+      "version": "1.9.16",
+      "purl": "pkg:golang/github.com/jinzhu/gorm@1.9.16",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jinzhu",
+      "name": "inflection",
+      "version": "1.0.0",
+      "purl": "pkg:golang/github.com/jinzhu/inflection@1.0.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/jonboulle",
+      "name": "clockwork",
+      "version": "0.4.0",
+      "purl": "pkg:golang/github.com/jonboulle/clockwork@0.4.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/json-iterator",
+      "name": "go",
+      "version": "1.1.12",
+      "purl": "pkg:golang/github.com/json-iterator/go@1.1.12",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/k3a",
+      "name": "html2text",
+      "version": "1.2.1",
+      "purl": "pkg:golang/github.com/k3a/html2text@1.2.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/kevinburke",
+      "name": "go-types",
+      "version": "0.0.0-20210723172823-2deba1f80ba7",
+      "purl": "pkg:golang/github.com/kevinburke/go-types@0.0.0-20210723172823-2deba1f80ba7",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/kevinburke",
+      "name": "rest",
+      "version": "0.0.0-20231107185522-a9c371f90234",
+      "purl": "pkg:golang/github.com/kevinburke/rest@0.0.0-20231107185522-a9c371f90234",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/kevinburke",
+      "name": "twilio-go",
+      "version": "0.0.0-20231009225535-38b36b35294d",
+      "purl": "pkg:golang/github.com/kevinburke/twilio-go@0.0.0-20231009225535-38b36b35294d",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/klauspost",
+      "name": "compress",
+      "version": "1.17.4",
+      "purl": "pkg:golang/github.com/klauspost/compress@1.17.4",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/klauspost/cpuid",
+      "name": "v2",
+      "version": "2.2.6",
+      "purl": "pkg:golang/github.com/klauspost/cpuid/v2@2.2.6",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/lann",
+      "name": "builder",
+      "version": "0.0.0-20180802200727-47ae307949d0",
+      "purl": "pkg:golang/github.com/lann/builder@0.0.0-20180802200727-47ae307949d0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/lann",
+      "name": "ps",
+      "version": "0.0.0-20150810152359-62de8c46ede0",
+      "purl": "pkg:golang/github.com/lann/ps@0.0.0-20150810152359-62de8c46ede0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/lib",
+      "name": "pq",
+      "version": "1.10.9",
+      "purl": "pkg:golang/github.com/lib/pq@1.10.9",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/lucasb-eyer",
+      "name": "go-colorful",
+      "version": "1.2.0",
+      "purl": "pkg:golang/github.com/lucasb-eyer/go-colorful@1.2.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/magiconair",
+      "name": "properties",
+      "version": "1.8.7",
+      "purl": "pkg:golang/github.com/magiconair/properties@1.8.7",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/masterminds",
+      "name": "squirrel",
+      "version": "1.5.4",
+      "purl": "pkg:golang/github.com/masterminds/squirrel@1.5.4",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/mattermost",
+      "name": "xml-roundtrip-validator",
+      "version": "0.1.0",
+      "purl": "pkg:golang/github.com/mattermost/xml-roundtrip-validator@0.1.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/mattn",
+      "name": "go-colorable",
+      "version": "0.1.13",
+      "purl": "pkg:golang/github.com/mattn/go-colorable@0.1.13",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/mattn",
+      "name": "go-isatty",
+      "version": "0.0.20",
+      "purl": "pkg:golang/github.com/mattn/go-isatty@0.0.20",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/minio",
+      "name": "md5-simd",
+      "version": "1.1.2",
+      "purl": "pkg:golang/github.com/minio/md5-simd@1.1.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/minio/minio-go",
+      "name": "v7",
+      "version": "7.0.66",
+      "purl": "pkg:golang/github.com/minio/minio-go/v7@7.0.66",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/minio",
+      "name": "sha256-simd",
+      "version": "1.0.1",
+      "purl": "pkg:golang/github.com/minio/sha256-simd@1.0.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/mitchellh",
+      "name": "mapstructure",
+      "version": "1.5.0",
+      "purl": "pkg:golang/github.com/mitchellh/mapstructure@1.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/modern-go",
+      "name": "concurrent",
+      "version": "0.0.0-20180306012644-bacd9c7ef1dd",
+      "purl": "pkg:golang/github.com/modern-go/concurrent@0.0.0-20180306012644-bacd9c7ef1dd",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/modern-go",
+      "name": "reflect2",
+      "version": "1.0.2",
+      "purl": "pkg:golang/github.com/modern-go/reflect2@1.0.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/muesli",
+      "name": "clusters",
+      "version": "0.0.0-20200529215643-2700303c1762",
+      "purl": "pkg:golang/github.com/muesli/clusters@0.0.0-20200529215643-2700303c1762",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/muesli",
+      "name": "gamut",
+      "version": "0.3.1",
+      "purl": "pkg:golang/github.com/muesli/gamut@0.3.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/muesli",
+      "name": "kmeans",
+      "version": "0.3.1",
+      "purl": "pkg:golang/github.com/muesli/kmeans@0.3.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/muhlemmer",
+      "name": "gu",
+      "version": "0.3.1",
+      "purl": "pkg:golang/github.com/muhlemmer/gu@0.3.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/muhlemmer",
+      "name": "httpforwarded",
+      "version": "0.1.0",
+      "purl": "pkg:golang/github.com/muhlemmer/httpforwarded@0.1.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/nicksnyder/go-i18n",
+      "name": "v2",
+      "version": "2.3.0",
+      "purl": "pkg:golang/github.com/nicksnyder/go-i18n/v2@2.3.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/pelletier/go-toml",
+      "name": "v2",
+      "version": "2.1.1",
+      "purl": "pkg:golang/github.com/pelletier/go-toml/v2@2.1.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/pkg",
+      "name": "errors",
+      "version": "0.9.1",
+      "purl": "pkg:golang/github.com/pkg/errors@0.9.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/pmezard",
+      "name": "go-difflib",
+      "version": "1.0.1-0.20181226105442-5d4384ee4fb2",
+      "purl": "pkg:golang/github.com/pmezard/go-difflib@1.0.1-0.20181226105442-5d4384ee4fb2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/pquerna",
+      "name": "otp",
+      "version": "1.4.0",
+      "purl": "pkg:golang/github.com/pquerna/otp@1.4.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/prometheus",
+      "name": "client_golang",
+      "version": "1.18.0",
+      "purl": "pkg:golang/github.com/prometheus/client_golang@1.18.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/prometheus",
+      "name": "client_model",
+      "version": "0.5.0",
+      "purl": "pkg:golang/github.com/prometheus/client_model@0.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/prometheus",
+      "name": "common",
+      "version": "0.46.0",
+      "purl": "pkg:golang/github.com/prometheus/common@0.46.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/prometheus",
+      "name": "procfs",
+      "version": "0.12.0",
+      "purl": "pkg:golang/github.com/prometheus/procfs@0.12.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/rakyll",
+      "name": "statik",
+      "version": "0.1.7",
+      "purl": "pkg:golang/github.com/rakyll/statik@0.1.7",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/rs",
+      "name": "cors",
+      "version": "1.10.1",
+      "purl": "pkg:golang/github.com/rs/cors@1.10.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/rs",
+      "name": "xid",
+      "version": "1.5.0",
+      "purl": "pkg:golang/github.com/rs/xid@1.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/russellhaering",
+      "name": "goxmldsig",
+      "version": "1.4.0",
+      "purl": "pkg:golang/github.com/russellhaering/goxmldsig@1.4.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/sagikazarmark",
+      "name": "slog-shim",
+      "version": "0.1.0",
+      "purl": "pkg:golang/github.com/sagikazarmark/slog-shim@0.1.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/sirupsen",
+      "name": "logrus",
+      "version": "1.9.3",
+      "purl": "pkg:golang/github.com/sirupsen/logrus@1.9.3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/sony",
+      "name": "sonyflake",
+      "version": "1.2.0",
+      "purl": "pkg:golang/github.com/sony/sonyflake@1.2.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/spf13",
+      "name": "afero",
+      "version": "1.11.0",
+      "purl": "pkg:golang/github.com/spf13/afero@1.11.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/spf13",
+      "name": "cast",
+      "version": "1.6.0",
+      "purl": "pkg:golang/github.com/spf13/cast@1.6.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/spf13",
+      "name": "cobra",
+      "version": "1.8.0",
+      "purl": "pkg:golang/github.com/spf13/cobra@1.8.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/spf13",
+      "name": "pflag",
+      "version": "1.0.5",
+      "purl": "pkg:golang/github.com/spf13/pflag@1.0.5",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/spf13",
+      "name": "viper",
+      "version": "1.18.2",
+      "purl": "pkg:golang/github.com/spf13/viper@1.18.2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/stretchr",
+      "name": "testify",
+      "version": "1.8.4",
+      "purl": "pkg:golang/github.com/stretchr/testify@1.8.4",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/subosito",
+      "name": "gotenv",
+      "version": "1.6.0",
+      "purl": "pkg:golang/github.com/subosito/gotenv@1.6.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/superseriousbusiness",
+      "name": "exifremove",
+      "version": "0.0.0-20210330092427-6acd27eac203",
+      "purl": "pkg:golang/github.com/superseriousbusiness/exifremove@0.0.0-20210330092427-6acd27eac203",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/ttacon",
+      "name": "builder",
+      "version": "0.0.0-20170518171403-c099f663e1c2",
+      "purl": "pkg:golang/github.com/ttacon/builder@0.0.0-20170518171403-c099f663e1c2",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/ttacon",
+      "name": "libphonenumber",
+      "version": "1.2.1",
+      "purl": "pkg:golang/github.com/ttacon/libphonenumber@1.2.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/x448",
+      "name": "float16",
+      "version": "0.8.4",
+      "purl": "pkg:golang/github.com/x448/float16@0.8.4",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/xrash",
+      "name": "smetrics",
+      "version": "0.0.0-20231213231151-1d8dd44e695e",
+      "purl": "pkg:golang/github.com/xrash/smetrics@0.0.0-20231213231151-1d8dd44e695e",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/zitadel",
+      "name": "logging",
+      "version": "0.5.0",
+      "purl": "pkg:golang/github.com/zitadel/logging@0.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/zitadel/oidc",
+      "name": "v3",
+      "version": "3.11.0",
+      "purl": "pkg:golang/github.com/zitadel/oidc/v3@3.11.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/zitadel",
+      "name": "passwap",
+      "version": "0.5.0",
+      "purl": "pkg:golang/github.com/zitadel/passwap@0.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/zitadel",
+      "name": "saml",
+      "version": "0.1.3",
+      "purl": "pkg:golang/github.com/zitadel/saml@0.1.3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/zitadel",
+      "name": "schema",
+      "version": "1.3.0",
+      "purl": "pkg:golang/github.com/zitadel/schema@1.3.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "github.com/zitadel",
+      "name": "zitadel",
+      "version": "2.46.0",
+      "purl": "pkg:golang/github.com/zitadel/zitadel@2.46.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "name": "go.opencensus.io",
+      "version": "0.24.0",
+      "purl": "pkg:golang/go.opencensus.io@0.24.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc",
+      "name": "otelgrpc",
+      "version": "0.46.1",
+      "purl": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/google.golang.org/grpc/otelgrpc@0.46.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/contrib/instrumentation/net/http",
+      "name": "otelhttp",
+      "version": "0.46.1",
+      "purl": "pkg:golang/go.opentelemetry.io/contrib/instrumentation/net/http/otelhttp@0.46.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel/exporters/otlp/otlptrace",
+      "name": "otlptracegrpc",
+      "version": "1.21.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/otlp/otlptrace/otlptracegrpc@1.21.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel/exporters/otlp",
+      "name": "otlptrace",
+      "version": "1.21.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/otlp/otlptrace@1.21.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel/exporters",
+      "name": "prometheus",
+      "version": "0.44.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/prometheus@0.44.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel/exporters/stdout",
+      "name": "stdouttrace",
+      "version": "1.21.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/exporters/stdout/stdouttrace@1.21.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel",
+      "name": "metric",
+      "version": "1.22.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/metric@1.22.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel/sdk",
+      "name": "metric",
+      "version": "1.21.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/sdk/metric@1.21.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel",
+      "name": "sdk",
+      "version": "1.21.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/sdk@1.21.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/otel",
+      "name": "trace",
+      "version": "1.22.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel/trace@1.22.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io",
+      "name": "otel",
+      "version": "1.22.0",
+      "purl": "pkg:golang/go.opentelemetry.io/otel@1.22.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.opentelemetry.io/proto",
+      "name": "otlp",
+      "version": "1.0.0",
+      "purl": "pkg:golang/go.opentelemetry.io/proto/otlp@1.0.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "go.uber.org",
+      "name": "mock",
+      "version": "0.4.0",
+      "purl": "pkg:golang/go.uber.org/mock@0.4.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "crypto",
+      "version": "0.18.0",
+      "purl": "pkg:golang/golang.org/x/crypto@0.18.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "exp",
+      "version": "0.0.0-20240112132812-db7319d0e0e3",
+      "purl": "pkg:golang/golang.org/x/exp@0.0.0-20240112132812-db7319d0e0e3",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "net",
+      "version": "0.20.0",
+      "purl": "pkg:golang/golang.org/x/net@0.20.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "oauth2",
+      "version": "0.16.0",
+      "purl": "pkg:golang/golang.org/x/oauth2@0.16.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "sync",
+      "version": "0.6.0",
+      "purl": "pkg:golang/golang.org/x/sync@0.6.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "sys",
+      "version": "0.16.0",
+      "purl": "pkg:golang/golang.org/x/sys@0.16.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "text",
+      "version": "0.14.0",
+      "purl": "pkg:golang/golang.org/x/text@0.14.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "golang.org/x",
+      "name": "time",
+      "version": "0.5.0",
+      "purl": "pkg:golang/golang.org/x/time@0.5.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "google.golang.org",
+      "name": "api",
+      "version": "0.156.0",
+      "purl": "pkg:golang/google.golang.org/api@0.156.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "google.golang.org/genproto/googleapis",
+      "name": "api",
+      "version": "0.0.0-20240108191215-35c7eff3a6b1",
+      "purl": "pkg:golang/google.golang.org/genproto/googleapis/api@0.0.0-20240108191215-35c7eff3a6b1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "google.golang.org/genproto/googleapis",
+      "name": "rpc",
+      "version": "0.0.0-20240108191215-35c7eff3a6b1",
+      "purl": "pkg:golang/google.golang.org/genproto/googleapis/rpc@0.0.0-20240108191215-35c7eff3a6b1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "google.golang.org",
+      "name": "genproto",
+      "version": "0.0.0-20240108191215-35c7eff3a6b1",
+      "purl": "pkg:golang/google.golang.org/genproto@0.0.0-20240108191215-35c7eff3a6b1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "google.golang.org",
+      "name": "grpc",
+      "version": "1.60.1",
+      "purl": "pkg:golang/google.golang.org/grpc@1.60.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "google.golang.org",
+      "name": "protobuf",
+      "version": "1.32.0",
+      "purl": "pkg:golang/google.golang.org/protobuf@1.32.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "gopkg.in",
+      "name": "ini.v1",
+      "version": "1.67.0",
+      "purl": "pkg:golang/gopkg.in/ini.v1@1.67.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "gopkg.in",
+      "name": "yaml.v2",
+      "version": "2.4.0",
+      "purl": "pkg:golang/gopkg.in/yaml.v2@2.4.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "gopkg.in",
+      "name": "yaml.v3",
+      "version": "3.0.1",
+      "purl": "pkg:golang/gopkg.in/yaml.v3@3.0.1",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "nhooyr.io",
+      "name": "websocket",
+      "version": "1.8.10",
+      "purl": "pkg:golang/nhooyr.io/websocket@1.8.10",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "namespace": "sigs.k8s.io",
+      "name": "yaml",
+      "version": "1.4.0",
+      "purl": "pkg:golang/sigs.k8s.io/yaml@1.4.0",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "name": "stdlib",
+      "version": "1.21.7",
+      "purl": "pkg:golang/stdlib@1.21.7",
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    },
+    {
+      "type": "golang",
+      "name": "stdlib",
+      "version": "go1.21.7",
+      "purl": "pkg:golang/stdlib@go1.21.7",
+      "licenses": [
+        "BSD-3-Clause"
+      ],
+      "locations": [
+        {
+          "path": "/app/zitadel",
+          "ordinal": 3,
+          "digest": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a",
+          "diff_id": "sha256:036ec8f7735ceb263b0f60eb2c63fb4bd83da1367955b8ebefbb5f5abafd800a"
+        }
+      ]
+    }
+  ],
+  "descriptor": {
+    "name": "docker-scout",
+    "version": "1.3.0",
+    "sbom_version": "10"
+  }
+}
