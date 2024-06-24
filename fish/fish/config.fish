@@ -15,7 +15,7 @@ zoxide init fish | source
 ## Custom Aliases
 alias START_ANDROID_EMU="emulator -avd Pixel_3a_API_34_extension_level_7_arm64-v8a"
 alias LATEST_TAGS="git tag --sort=-creatordate | grep int | head -n 1 &&  git tag --sort=-creatordate | grep pre-prod | head -n 1 &&  git tag --sort=-creatordate | grep aaron-prod | head -n 1"
-alias local_dev="cd /Users/paalwilliams/src/aaron/product_core/local_dev && ./start.sh"
+alias local_dev="cd /Users/paul.williams/src/aaron/product_core/local_dev && ./start.sh"
 alias cls="clear"
 alias icat="kitten icat"
 

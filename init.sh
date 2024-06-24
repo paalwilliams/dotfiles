@@ -9,7 +9,7 @@ volta install node@16
 
 # Stow and dotfiles
 brew install stow
-mkdir ~/.config
+mkdir -p ~/.config
 stow nvim --target=$HOME/.config
 stow fish --target=$HOME/.config
 stow kitty --target=$HOME/.config
@@ -21,14 +21,18 @@ brew install --cask font-hack-nerd-font
 # Homebrew Packages 
 brew install rectangle
 brew install zoxide
-brew install neovim
 brew install kitty
-brew install visual-studio-code
-brew install fish
+
+brew install neovim
+brew install lazygit
 brew install ripgrep
+brew install fish
+
+brew install visual-studio-code
 brew install karabiner-elements
 brew install alfred
 brew install firefox
+brew install --cask docker 
 
 # Pyenv
 brew install pyenv
