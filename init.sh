@@ -33,6 +33,7 @@ brew install karabiner-elements
 brew install alfred
 brew install firefox
 brew install --cask docker 
+brew install stats
 
 # Pyenv
 brew install pyenv
