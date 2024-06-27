@@ -1,7 +1,7 @@
 # Homebrew
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Node.JS
+# Node.JS (using volta as Package manager)
 curl https://get.volta.sh | bash
 volta install node
 volta install node@20
@@ -22,18 +22,19 @@ brew install --cask font-hack-nerd-font
 brew install rectangle
 brew install zoxide
 brew install kitty
-
 brew install neovim
 brew install lazygit
 brew install ripgrep
-brew install fish
-
 brew install visual-studio-code
 brew install karabiner-elements
 brew install alfred
 brew install firefox
 brew install --cask docker 
 brew install stats
+
+# Install Fish and Fisher (Fish plugin manager) 
+brew install fish
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 
 # Pyenv
 brew install pyenv
