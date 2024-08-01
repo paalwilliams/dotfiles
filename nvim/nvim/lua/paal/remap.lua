@@ -9,4 +9,40 @@ vim.keymap.set("n", "dd", '"_dd')
 vim.keymap.set("v", "d", '"_d')
 vim.keymap.set("v", "dd", '"_dd')
 
-vim.keymap.set("n", "<leader>ca", ":lua vim.lsp.buf.code_action()<CR>")
+vim.api.nvim_create_autocmd("LspAttach", {
+	desc = "LSP actions",
+	callback = function(event)
+		local opts = { buffer = event.buf }
+
+		-- these will be buffer-local keybindings
+		-- because they only work if you have an active language server
+
+		vim.keymap.set("n", "K", function()
+			vim.lsp.buf.hover()
+		end, opts)
+		vim.keymap.set("n", "gd", function()
+			vim.lsp.buf.definition()
+		end, opts)
+		vim.keymap.set("n", "gD", function()
+			vim.lsp.buf.declaration()
+		end, opts)
+		vim.keymap.set("n", "gi", function()
+			vim.lsp.buf.implementation()
+		end, opts)
+		vim.keymap.set("n", "go", function()
+			vim.lsp.buf.type_definition()
+		end, opts)
+		vim.keymap.set("n", "gr", function()
+			vim.lsp.buf.references()
+		end, opts)
+		vim.keymap.set("n", "gs", function()
+			vim.lsp.buf.signature_help()
+		end, opts)
+		vim.keymap.set("n", "<leader>rn", function()
+			vim.lsp.buf.rename()
+		end, opts)
+		vim.keymap.set("n", "<leader>ca", function()
+			vim.lsp.buf.code_action()
+		end, opts)
+	end,
+})
