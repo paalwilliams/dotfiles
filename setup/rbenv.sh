@@ -1,0 +1,3 @@
+# rbenv
+rbenv init
+
