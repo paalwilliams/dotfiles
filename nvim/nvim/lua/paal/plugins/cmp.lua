@@ -24,8 +24,39 @@ return {
 				["<C-p>"] = cmp.mapping.select_prev_item(cmp_select),
 				["<C-n>"] = cmp.mapping.select_next_item(cmp_select),
 				["<C-y>"] = cmp.mapping.confirm({ select = true }),
+				["<Up>"] = cmp.mapping.select_prev_item({ behavior = "select" }),
+				["<Down>"] = cmp.mapping.select_next_item({ behavior = "select" }),
 				["<C-Space>"] = cmp.mapping.complete(),
+				["<C-n>"] = cmp.mapping(function()
+					if cmp.visible() then
+						cmp.select_next_item({ behavior = "insert" })
+					else
+						cmp.complete()
+					end
+				end),
+				["<Enter>"] = function(fallback)
+					-- Don't block <CR> if signature help is active
+					-- https://github.com/hrsh7th/cmp-nvim-lsp-signature-help/issues/13
+					if
+						not cmp.visible()
+						or not cmp.get_selected_entry()
+						or cmp.get_selected_entry().source.name == "nvim_lsp_signature_help"
+					then
+						fallback()
+					else
+						cmp.confirm({
+							-- Replace word if completing in the middle of a word
+							-- https://github.com/hrsh7th/nvim-cmp/issues/664
+							behavior = cmp.ConfirmBehavior.Replace,
+							-- Don't select first item on CR if nothing was selected
+							select = false,
+						})
+					end
+				end,
 			}),
 		}
 	end,
 }
+
+
+

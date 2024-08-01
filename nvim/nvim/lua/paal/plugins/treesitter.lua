@@ -5,7 +5,26 @@ return {
 	main = "nvim-treesitter.configs",
 	opts = {
 		-- A list of parser names, or "all" (the five listed parsers should always be installed)
-		ensure_installed = { "javascript", "typescript", "c", "lua", "vim", "vimdoc", "query" },
+		ensure_installed = {
+			"json",
+			"javascript",
+			"typescript",
+			"tsx",
+			"yaml",
+			"html",
+			"css",
+			"prisma",
+			"markdown",
+			"markdown_inline",
+			"svelte",
+			"graphql",
+			"bash",
+			"lua",
+			"vim",
+			"dockerfile",
+			"gitignore",
+			"query",
+		  },
 
 		-- Install parsers synchronously (only applied to `ensure_installed`)
 		sync_install = false,
