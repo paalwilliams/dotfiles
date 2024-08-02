@@ -2,7 +2,7 @@
 
 ## Instructions
 
-### Add execution permissions on on dependencies and setup scripts
+### Add execution permissions on dependencies and setup scripts
 
 > This will install homebrew and the corresponding dependencies
 
