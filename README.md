@@ -11,3 +11,11 @@
 `chmod +x setup/*.sh`
 
 `chmod +x init.sh`
+
+### Run the install script
+
+> You wil be prompted to input your password.
+
+```
+./init.sh
+```
