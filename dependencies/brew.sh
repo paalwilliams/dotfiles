@@ -17,6 +17,7 @@ fish \
 rbenv  \
 ruby-build \
 pyenv \
-stow 
+stow \
+alacritty
 
 brew install --cask font-hack-nerd-font 
