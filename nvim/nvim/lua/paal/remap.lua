@@ -13,6 +13,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",
 	callback = function(event)
 		local opts = { buffer = event.buf }
+		vim.api.nvim_command(":cclose")
 
 		-- these will be buffer-local keybindings
 		-- because they only work if you have an active language server

@@ -12,16 +12,7 @@ return {
 	dependencies = {
 		"nvim-lua/plenary.nvim",
 	},
-	config = function()
-		local wk = require("which-key")
-		wk.register({
-			g = {
-				name = "LazyGit",
-				g = {
-					vim.cmd.LazyGit,
-					"LazyGit",
-				},
-			},
-		}, { prefix = "<leader>" })
-	end,
+	keys = {
+		{"gg", vim.cmd.LazyGit, desc="Lazy[g]it"}
+	},
 }
