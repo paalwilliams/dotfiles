@@ -13,6 +13,6 @@ return {
 		"nvim-lua/plenary.nvim",
 	},
 	keys = {
-		{"<leader>gg", vim.cmd.LazyGit, desc="Lazy[g]it"}
+		{ "<leader>gg", vim.cmd.LazyGit, desc = "Lazy[g]it" },
 	},
 }

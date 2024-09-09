@@ -20,60 +20,8 @@ return {
 			end,
 		}
 	end,
-	-- keys = {
-	-- -- {
-	-- 	-- 	"<leader>aa",
-	-- 	-- 	function()
-	-- 	-- 		return require("CopilotChat").toggle()
-	-- 	-- 	end,
-	-- 	-- 	desc = "Toggle (CopilotChat)",
-	-- 	-- 	mode = { "n", "v" },
-	-- 	-- },
-	-- 	{
-	-- 		"<leader>ax",
-	-- 		function()
-	-- 			return require("CopilotChat").reset()
-	-- 		end,
-	-- 		desc = "Clear (CopilotChat)",
-	-- 		mode = { "n", "v" },
-	-- 	},
-	-- 	{
-	-- 		"<leader>aq",
-	-- 		function()
-	-- 			local input = vim.fn.input("Quick Chat: ")
-	-- 			if input ~= "" then
-	-- 				require("CopilotChat").ask(input)
-	-- 			end
-	-- 		end,
-	-- 		desc = "Quick Chat (CopilotChat)",
-	-- 		mode = { "n", "v" },
-	-- 	},
-	-- },
 	config = function(_, opts)
 		local chat = require("CopilotChat")
-		local wk = require("which-key")
-		wk.register({
-			a = {
-				name = "Copilot",
-				a = {
-					chat.toggle,
-					"Toggle Copilot Chat",
-				},
-				x = {
-					chat.reset,
-					"Clear Copilot Chat",
-				},
-				q = {
-					function()
-						local input = vim.fn.input("Quick Chat: ")
-						if input ~= "" then
-							require("CopilotChat").ask(input)
-						end
-					end,
-					"Copilot Quick Chat",
-				},
-			},
-		}, { prefix = "<leader>" })
 		require("CopilotChat.integrations.cmp").setup()
 
 		vim.api.nvim_create_autocmd("BufEnter", {
