@@ -1,22 +1,17 @@
 return {
-	"stevearc/oil.nvim",
-	dependencies = { "nvim-tree/nvim-web-devicons" },
-	config = function()
-		local wk = require("which-key")
-		local actions = require("oil.actions")
-		wk.register({
-			e = {
-				name = "Oil",
-				h = {
-					actions.toggle_hidden.callback,
-					"Toggle Hidden Files",
-				},
-				e = { actions.parent.callback, "Open parent directory" },
-			},
-		}, { prefix = "<leader>" })
-
-		require("oil").setup({
-			default_file_explorer = true,
-		})
-	end,
+  'stevearc/oil.nvim',
+  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  keys = {
+    { '<leader>ee',
+    function()
+      require('oil').open()
+    end,
+    desc = '[F]ormat buffer', }
+  },
+  opts = {
+    default_file_explorer = true,
+    view_options = {
+      show_hidden = true,
+    },
+  },
 }

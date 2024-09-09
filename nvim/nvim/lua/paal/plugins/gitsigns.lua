@@ -11,16 +11,7 @@ return {
 			changedelete = { text = "~" },
 		},
 		on_attach = function(bufnr)
-			local wk = require('which-key');
 			local gs = require("gitsigns")
-			wk.register({
-				g = {
-					b = {
-						gs.toggle_current_line_blame,
-						"Toggle Current line Blame"
-					},
-				}
-			}, {prefix = "<leader>"} )
 			vim.keymap.set("n", "<leader>gb", gs.toggle_current_line_blame)
 		end,
 	},

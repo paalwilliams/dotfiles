@@ -7,3 +7,6 @@ require("paal.vim_config")
 local vimrc = vim.fn.stdpath("config") .. "/vimrc.vim"
 vim.cmd.source(vimrc)
 
+require('oil').setup({
+	default_file_explorer = true
+})
