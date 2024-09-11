@@ -9,6 +9,14 @@ return {
 			end,
 			desc = "[F]ormat buffer",
 		},
+
+		{
+			"<leader>eh",
+			function()
+				require("oil.actions").toggle_hidden.callback()
+			end,
+			desc = "[F]ormat buffer",
+		},
 	},
 	opts = {
 		default_file_explorer = true,

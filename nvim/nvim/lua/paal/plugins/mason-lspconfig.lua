@@ -19,7 +19,7 @@ return {
 				"tsserver",
 				"rust_analyzer",
 				"bashls",
-				"stylua",
+				"ruby_lsp",
 			},
 			handlers = {
 				default_setup,
