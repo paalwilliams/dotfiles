@@ -1,0 +1,10 @@
+[font]
+size = 14.0
+
+[font.normal]
+family = "Hack Nerd Font Mono"
+style = "Regular"
+
+[window]
+decorations = 'Buttonless' 
+padding = {x = 5, y = 5}
