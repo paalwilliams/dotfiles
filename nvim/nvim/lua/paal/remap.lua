@@ -47,3 +47,7 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 	end,
 })
+
+vim.keymap.set("n", "<M-c>", '"+y')
+
+vim.keymap.set("v", "<M-c>", '"+y')
