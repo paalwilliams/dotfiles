@@ -1,8 +1,8 @@
-(exec ./dependencies/brew.sh)
-(exec ./dependencies/fish.sh)
-(exec ./dependencies/volta.sh)
-(exec ./setup/stow.sh)
-(exec ./setup/fish.sh)
-(exec ./setup/pyenv.sh)
-(exec ./setup/volta.sh)
-(exec ./setup/rbenv.sh)
+. ./setup/detect_platform.sh
+. ./dependencies/$PLATFORM.sh
+. ./dependencies/all.sh
+. ./setup/fish.sh
+. ./setup/pyenv.sh
+. ./setup/rbenv.sh
+. ./setup/volta.sh
+. ./setup/stow.sh

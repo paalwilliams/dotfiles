@@ -1,2 +1,3 @@
-fish_variables
+fish/fish/fish_variables
+fish/fish/*.tmp.*
 .DS_Store
