@@ -13,6 +13,8 @@ vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",
 	callback = function(event)
 		local opts = { buffer = event.buf }
+
+		-- This should really be removed in favor of a function quick fix list.
 		vim.api.nvim_command(":cclose")
 
 		-- these will be buffer-local keybindings
