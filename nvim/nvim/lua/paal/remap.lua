@@ -9,6 +9,18 @@ vim.keymap.set("n", "dd", '"_dd')
 vim.keymap.set("v", "d", '"_d')
 vim.keymap.set("v", "dd", '"_dd')
 
+-- note: diagnostics are not exclusive to lsp servers
+-- so these can be global keybindings
+vim.keymap.set("n", "gl", function()
+	vim.diagnostic.open_float()
+end)
+vim.keymap.set("n", "[d", function()
+	vim.diagnostic.goto_prev()
+end)
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.goto_next()
+end)
+
 vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",
 	callback = function(event)
@@ -49,7 +61,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 	end,
 })
-
-vim.keymap.set("n", "<M-c>", '"+y')
-
-vim.keymap.set("v", "<M-c>", '"+y')
