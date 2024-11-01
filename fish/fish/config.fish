@@ -7,8 +7,6 @@ zoxide init fish | source
 # Custom Aliases
 
 alias cls="clear"
-alias icat="kitten icat"
-
 
 # rbenv
 status --is-interactive; and rbenv init - fish | source
