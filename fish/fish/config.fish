@@ -15,3 +15,4 @@ status --is-interactive; and rbenv init - fish | source
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+pyenv init - | source
