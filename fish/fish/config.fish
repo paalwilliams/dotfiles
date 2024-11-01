@@ -22,6 +22,6 @@ alias icat="kitten icat"
 # rbenv
 status --is-interactive; and rbenv init - fish | source
 
-pyenv init - | source
+#pyenv init - | source
 
 eval "$(/opt/homebrew/bin/brew shellenv)"
