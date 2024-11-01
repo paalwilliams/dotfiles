@@ -1,9 +1,10 @@
 set -gx VOLTA_HOME "$HOME/.volta"
 set -gx PATH "$VOLTA_HOME/bin" $PATH
 
+# init zoxide 
 zoxide init fish | source
 
-## Custom Aliases
+# Custom Aliases
 
 alias cls="clear"
 alias icat="kitten icat"
