@@ -2,17 +2,31 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<leader>bd", "<CMD>bd<CR>")
 vim.keymap.set("n", "<leader>fs", ":lua vim.lsp.buf.formatting_sync()<CR>:w<CR>", { noremap = true, silent = true })
+--
+-- vim.keymap.set("n", "d", '"_d')
+-- vim.keymap.set("n", "dd", '"_dd')
+--
+-- vim.keymap.set("v", "d", '"_d')
+-- vim.keymap.set("v", "dd", '"_dd')
 
-vim.keymap.set("n", "d", '"_d')
-vim.keymap.set("n", "dd", '"_dd')
-
-vim.keymap.set("v", "d", '"_d')
-vim.keymap.set("v", "dd", '"_dd')
+-- note: diagnostics are not exclusive to lsp servers
+-- so these can be global keybindings
+vim.keymap.set("n", "gl", function()
+	vim.diagnostic.open_float()
+end)
+vim.keymap.set("n", "[d", function()
+	vim.diagnostic.goto_prev()
+end)
+vim.keymap.set("n", "]d", function()
+	vim.diagnostic.goto_next()
+end)
 
 vim.api.nvim_create_autocmd("LspAttach", {
 	desc = "LSP actions",
 	callback = function(event)
 		local opts = { buffer = event.buf }
+
+		-- This should really be removed in favor of a function quick fix list.
 		vim.api.nvim_command(":cclose")
 
 		-- these will be buffer-local keybindings
@@ -47,7 +61,3 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end, opts)
 	end,
 })
-
-vim.keymap.set("n", "<M-c>", '"+y')
-
-vim.keymap.set("v", "<M-c>", '"+y')
