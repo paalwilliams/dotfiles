@@ -1,16 +1,14 @@
 set -gx VOLTA_HOME "$HOME/.volta"
-set -gx PATH "$VOLTA_HOME/bin" $PATH
+set -gx PATH "$VOLTA_HOME/bin" $PATH 
 
-# init zoxide 
-zoxide init fish | source
+status --is-interactive; and source (rbenv init -|psub)
 
 # Custom Aliases
 
 alias cls="clear"
 
-# rbenv
-status --is-interactive; and rbenv init - fish | source
-
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+zoxide init fish | source
 
 pyenv init - | source
