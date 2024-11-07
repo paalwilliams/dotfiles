@@ -1,3 +1,6 @@
 fish/fish/fish_variables
 fish/fish/*.tmp.*
+fish/fish/completions
+fish/fish/functions
+fish/fish/conf.d
 .DS_Store
