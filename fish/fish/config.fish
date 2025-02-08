@@ -18,11 +18,15 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 pyenv init - | source
 zoxide init fish | source
 
+source "$HOME/.cargo/env.fish"
+
+source "$HOME/export-esp.sh"
+
 #
 fortune | cowsay -t | lolcat
 
 # Doctolib stuff here
 
-source <(yak completion fish | psub)
+#source <(yak completion fish | psub)
 
 # Doctlib stuff here
