@@ -30,3 +30,5 @@ fortune | cowsay -t | lolcat
 #source <(yak completion fish | psub)
 
 # Doctlib stuff here
+set -gx VOLTA_HOME "$HOME/.volta"
+set -gx PATH "$VOLTA_HOME/bin" $PATH
