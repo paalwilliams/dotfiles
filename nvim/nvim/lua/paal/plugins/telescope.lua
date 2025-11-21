@@ -6,6 +6,7 @@ return {
 		{ "<leader>/", require("telescope.builtin").live_grep, desc = "Live Grep" },
 		{ "<leader>fb", require("telescope.builtin").buffers, desc = "[F]ind [B]uffers" },
 		{ "<leader>fh", require("telescope.builtin").find_files, desc = "[F]ind [H]elp tags" },
+		
 		{
 			"<leader>fdf",
 			function()
@@ -23,54 +24,12 @@ return {
 				})
 			end,
 		},
-		{
-			"<leader>fpac",
-			function()
-				require("telescope.builtin").find_files({
-					cwd = "~/src/doctolib/phone-assistant-core/",
-				})
-			end,
-		},
-		{
-			"<leader>gpac",
-			function()
-				require("telescope.builtin").live_grep({
-					cwd = "~/src/doctolib/phone-assistant-core/",
-				})
-			end,
-		},
-		{
-			"<leader>fpav",
-			function()
-				require("telescope.builtin").find_files({
-					cwd = "~/src/doctolib/phone-assistant-voip/",
-				})
-			end,
-		},
-		{
-			"<leader>gpav",
-			function()
-				require("telescope.builtin").live_grep({
-					cwd = "~/src/doctolib/phone-assistant-voip/",
-				})
-			end,
-		},
 
-		{
-			"<leader>fpaf",
+		{ 	"<leader>fw",
 			function()
-				require("telescope.builtin").find_files({
-					cwd = "~/src/doctolib/phone-assistant-flow-engine/",
-				})
-			end,
-		},
-		{
-			"<leader>gpaf",
-			function()
-				require("telescope.builtin").live_grep({
-					cwd = "~/src/doctolib/phone-assistant-flow-engine/",
-				})
-			end,
-		},
+				local word = vim.fn.expand("<cword>")
+				require("telescope.builtin").live_grep({ default_text = word })
+			end, 
+		}
 	},
 }
